@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+//adding icon
+import send from '../../assets/paper-plane-solid.svg'
 
 const CreateTask = ({ addTask }) => {
   const [value, setValue] = useState("");
@@ -11,7 +13,7 @@ const CreateTask = ({ addTask }) => {
     setValue("");
   };
   return (
-    <form onSubmit={handleSubmit} className="create-task" >
+    <form onSubmit={handleSubmit} className="create-task">
       <input
         type="text"
         className="form-control w-75 d-inline-block"
@@ -19,8 +21,8 @@ const CreateTask = ({ addTask }) => {
         placeholder="کارهای روزمره خود را ثبت کنید ..."
         onChange={(e) => setValue(e.target.value)}
       />
-      <button type="submit" className="btn text-light d-inline-block mx-2">
-        <i className="fa fa-send"></i>
+      <button type="submit" className="btn  d-inline-block mx-2">
+      <img src={send} width={24} />
       </button>
     </form>
   );

@@ -5,6 +5,6 @@
     src: url('./fonts/Vazir-Medium.woff');
 }
 
-input,p{
+*{
     font-family: 'vazir' !important;
 }

@@ -4,10 +4,11 @@ import Todo from "./components/Todo/Todo";
 
 const App = () => {
   return (
-    <div className="todo-container mt-5 p-2">
-     <h1>Todo-App</h1>
-     <hr/>
-     <Todo />
+    <div className="todo-container mt-5 ">
+      <h1 className="px-2 py-3 text-light">لیست کار های روزمره</h1>
+      <div className="py-2">
+        <Todo />
+      </div>
     </div>
   );
 };

@@ -30,16 +30,13 @@ const Todo = () => {
   const editTasks = (e) => {
     setTasks(e.target.value);
   };
+
   return (
     <section className="todo">
       <div>
-        <p className="tasks-remain rounded-2 p-2">
-          <i class="fa-solid fa-briefcase-blank"></i>
-          کارهای باقیمانده امروز: ({tasksRemaining}){" "}
-        </p>
-        <hr />
         <CreateTask addTask={addTask} />
       </div>
+
       <div>
         {tasks.map((task, index) => (
           <Task
@@ -51,6 +48,10 @@ const Todo = () => {
             editTasks={editTasks}
           />
         ))}
+        <hr />
+        <p className="tasks-remain rounded-2 p-2">
+          کارهای باقیمانده امروز: ({tasksRemaining}){" "}
+        </p>
       </div>
     </section>
   );
